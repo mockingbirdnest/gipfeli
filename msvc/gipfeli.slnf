@@ -1,0 +1,8 @@
+{
+  "solution": {
+    "path": "gipfeli.sln",
+    "projects": [
+      "gipfeli.vcxproj",
+    ]
+  }
+}

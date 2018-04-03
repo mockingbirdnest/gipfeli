@@ -1,0 +1,15 @@
+Debug
+Release
+
+.vs
+*.tlog
+*.pdb
+*.lib
+*.obj
+*.idb
+*.exe
+*.ilk
+*.log
+*.iobj
+*.ipdb
+*.exp
