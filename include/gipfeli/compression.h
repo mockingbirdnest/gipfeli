@@ -11,7 +11,7 @@
 
 using std::string;
 
-namespace util {
+namespace google {
 namespace compression {
 
 class Compressor {
@@ -103,6 +103,6 @@ class Compressor {
 };
 
 }  // namespace compression
-}  // namespace util
+}  // namespace google
 
 #endif  // UTIL_COMPRESSION_PUBLIC_COMPRESSION_H_

@@ -35,7 +35,7 @@
 
 #include "gipfeli/compression.h"
 
-namespace util {
+namespace google {
 namespace compression {
 
 // Return a new compressor object that implements gipfeli compression.
@@ -44,6 +44,6 @@ namespace compression {
 Compressor* NewGipfeliCompressor();
 
 }  // namespace compression
-}  // namespace util
+}  // namespace google
 
 #endif  // UTIL_COMPRESSION_GIPFELI_PUBLIC_GIPFELI_H_

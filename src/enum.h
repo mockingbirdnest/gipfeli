@@ -3,7 +3,7 @@
 #ifndef UTIL_COMPRESSION_GIPFELI_INTERNAL_ENUM_H_
 #define UTIL_COMPRESSION_GIPFELI_INTERNAL_ENUM_H_
 
-namespace util {
+namespace google {
 namespace compression {
 namespace gipfeli {
 
@@ -32,5 +32,5 @@ inline uint32 CommandCopy(uint32 length, uint32 offset) {
 
 }  // namespace gipfeli
 }  // namespace compression
-}  // namespace util
+}  // namespace google
 #endif  // UTIL_COMPRESSION_GIPFELI_INTERNAL_ENUM_H_

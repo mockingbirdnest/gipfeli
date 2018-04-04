@@ -11,7 +11,7 @@
 #include "gipfeli/sinksource.h"
 #include "gipfeli/stubs-internal.h"
 
-namespace util {
+namespace google {
 namespace compression {
 
 Compressor* NewGipfeliCompressor() {
@@ -293,4 +293,4 @@ size_t Gipfeli::CompressStream(
 
 }  // namespace gipfeli
 }  // namespace compression
-}  // namespace util
+}  // namespace google

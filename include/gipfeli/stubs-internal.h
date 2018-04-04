@@ -51,7 +51,7 @@
   void operator=(const TypeName&)
 #endif
 
-namespace util {
+namespace google {
 namespace compression {
 
 typedef int8_t int8;
@@ -381,6 +381,6 @@ static inline int FindMatchLengthWithLimit(const uint8 *s1, const uint8 *s2,
 #endif
 
 }  // namespace compression
-}  // namespace util
+}  // namespace google
 
 #endif  // UTIL_COMPRESSION_GIPFELI_OPENSOURCE_STUBS_INTERNAL_H_

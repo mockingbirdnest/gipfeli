@@ -9,7 +9,7 @@
 
 using std::min;
 
-namespace util {
+namespace google {
 namespace compression {
 
 // MemBlock needed for Sink
@@ -220,6 +220,6 @@ class UncheckedByteArraySink : public Sink {
 };
 
 }  // namespace compression
-}  // namespace util
+}  // namespace google
 
 #endif  // UTIL_COMPRESSION_GIPFELI_OPENSOURCE_SINKSOURCE_H_
