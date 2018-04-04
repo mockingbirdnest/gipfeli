@@ -10,8 +10,8 @@
 #include <string>
 #include <vector>
 
-#include "gipfeli.h"
-#include "stubs-internal.h"
+#include "gipfeli/gipfeli.h"
+#include "gipfeli/stubs-internal.h"
 
 using std::cout;
 using std::endl;

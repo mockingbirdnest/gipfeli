@@ -8,8 +8,8 @@
 
 #include "entropy.h"
 #include "lz77.h"
-#include "sinksource.h"
-#include "stubs-internal.h"
+#include "gipfeli/sinksource.h"
+#include "gipfeli/stubs-internal.h"
 
 namespace util {
 namespace compression {

@@ -7,8 +7,7 @@
 #include <stdlib.h>  // for size_t
 #include <string>
 
-#include "sinksource.h"
-#include "stubs-internal.h"
+#include "gipfeli/sinksource.h"
 
 using std::string;
 
