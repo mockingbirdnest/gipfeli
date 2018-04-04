@@ -7,6 +7,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gipfeli", "gipfeli.vcxproj"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gipfeli_test", "gipfeli_test.vcxproj", "{32035621-85D2-42D6-98D5-9467FAC319B2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0872FD53-AE1A-4034-A886-A56D4FB739B9}"
+	ProjectSection(SolutionItems) = preProject
+		portability_macros.props = portability_macros.props
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
