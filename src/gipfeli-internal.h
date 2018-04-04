@@ -7,13 +7,13 @@
 #include "gipfeli.h"
 #include "compression.h"
 
-namespace util {
+namespace google {
 namespace compression {
 namespace gipfeli {
 
 class LZ77;
 
-class Gipfeli : public util::compression::Compressor {
+class Gipfeli : public google::compression::Compressor {
  public:
   Gipfeli() : compressor_state_(NULL), decompressor_state_(NULL) {}
   virtual ~Gipfeli() {
@@ -71,7 +71,7 @@ class Gipfeli : public util::compression::Compressor {
   DISALLOW_COPY_AND_ASSIGN(Gipfeli);
 };
 
-class GipfeliAdaptor : public util::compression::Compressor {
+class GipfeliAdaptor : public google::compression::Compressor {
  public:
   GipfeliAdaptor() {}
   virtual ~GipfeliAdaptor() {}
@@ -179,6 +179,6 @@ inline void IncrementalCopyFastPath(const char* src, char* op, int len) {
 
 }  // namespace gipfeli
 }  // namespace compression
-}  // namespace util
+}  // namespace google
 
 #endif  // UTIL_COMPRESSION_GIPFELI_INTERNAL_GIPFELI_H_

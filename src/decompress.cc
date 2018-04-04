@@ -12,7 +12,7 @@
 
 #include "stubs-internal.h"
 
-namespace util {
+namespace google {
 namespace compression {
 namespace gipfeli {
 
@@ -493,4 +493,4 @@ bool Gipfeli::InternalRawUncompressStream(
 
 }  // namespace gipfeli
 }  // namespace compression
-}  // namespace util
+}  // namespace google

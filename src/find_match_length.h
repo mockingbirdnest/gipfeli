@@ -9,7 +9,7 @@
 
 #include "stubs-internal.h"
 
-namespace util {
+namespace google {
 namespace compression {
 
 // Return the largest match of n bytes starting at s1 and s2.
@@ -103,6 +103,6 @@ static inline int MultiBlockFindMatchLength(const uint8* s1,
 #endif
 
 }  // namespace compression
-}  // namespace util
+}  // namespace google
 
 #endif  // UTIL_COMPRESSION_GIPFELI_INTERNAL_FIND_MATCH_LENGTH_H_

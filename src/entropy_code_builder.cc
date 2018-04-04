@@ -6,7 +6,7 @@
 
 #include "stubs-internal.h"
 
-namespace util {
+namespace google {
 namespace compression {
 namespace gipfeli {
 
@@ -77,4 +77,4 @@ void EntropyCodeBuilder::ProduceSymbolOrder(uint8* symbols,
 
 }  // namespace gipfeli
 }  // namespace compression
-}  // namespace util
+}  // namespace google

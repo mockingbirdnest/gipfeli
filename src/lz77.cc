@@ -8,7 +8,7 @@
 #include "enum.h"
 #include "stubs-internal.h"
 
-namespace util {
+namespace google {
 namespace compression {
 namespace gipfeli {
 
@@ -200,7 +200,7 @@ void LZ77::CompressFragment(const char* input,
         int matched = 4;
         if (!in_prev_block || ((prev_block + kBlockSize) == base_ip)
             || (candidate + 4 >= (prev_block + kBlockSize))) {
-          matched += util::compression::FindMatchLength(
+          matched += google::compression::FindMatchLength(
               reinterpret_cast<const uint8*>(candidate) + 4,
               reinterpret_cast<const uint8*>(ip) + 4,
               reinterpret_cast<const uint8*>(ip_end));
@@ -299,4 +299,4 @@ size_t LZ77::MaxCompressedCommandsSize(size_t input_size) {
 
 }  // namespace gipfeli
 }  // namespace compression
-}  // namespace util
+}  // namespace google

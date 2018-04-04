@@ -5,7 +5,7 @@
 
 #include "stubs-internal.h"
 
-namespace util {
+namespace google {
 namespace compression {
 namespace gipfeli {
 
@@ -29,6 +29,6 @@ class EntropyCodeBuilder {
 
 }  // namespace gipfeli
 }  // namespace compression
-}  // namespace util
+}  // namespace google
 
 #endif  // UTIL_COMPRESSION_GIPFELI_INTERNAL_ENTROPY_CODE_BUILDER_H_

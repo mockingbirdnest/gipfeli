@@ -82,8 +82,8 @@ bool TestFile(const string& label, const string& filename,
 
   // Init compressor and compress
   string compressed;
-  util::compression::Compressor* compressor =
-      util::compression::NewGipfeliCompressor();
+  google::compression::Compressor* compressor =
+      google::compression::NewGipfeliCompressor();
   ResetTimer();
   *compressed_size = compressor->Compress(original, &compressed);
   *compression_time = GetElapsedTime();

@@ -10,7 +10,7 @@
 #include "enum.h"
 #include "stubs-internal.h"
 
-namespace util {
+namespace google {
 namespace compression {
 namespace gipfeli {
 
@@ -394,4 +394,4 @@ char* Entropy::Compress(const uint8* __restrict content,
 
 }  // namespace gipfeli
 }  // namespace compression
-}  // namespace util
+}  // namespace google

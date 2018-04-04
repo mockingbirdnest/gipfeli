@@ -7,7 +7,7 @@
 
 #include "stubs-internal.h"
 
-namespace util {
+namespace google {
 namespace compression {
 namespace gipfeli {
 
@@ -153,6 +153,6 @@ void Entropy::WriteBits(int length,
 
 }  // namespace gipfeli
 }  // namespace compression
-}  // namespace util
+}  // namespace google
 
 #endif  // UTIL_COMPRESSION_GIPFELI_INTERNAL_ENTROPY_H_

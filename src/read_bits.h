@@ -5,7 +5,7 @@
 
 #include "stubs-internal.h"
 
-namespace util {
+namespace google {
 namespace compression {
 namespace gipfeli {
 
@@ -71,5 +71,5 @@ class ReadBits {
 
 }  // namespace gipfeli
 }  // namespace compression
-}  // namespace util
+}  // namespace google
 #endif  // UTIL_COMPRESSION_GIPFELI_INTERNAL_READ_BITS_H_

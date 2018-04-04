@@ -7,7 +7,7 @@
 
 #include "stubs-internal.h"
 
-namespace util {
+namespace google {
 namespace compression {
 namespace gipfeli {
 
@@ -82,6 +82,6 @@ void EmitCopyForTesting(const uint32 offset,
 
 }  // namespace gipfeli
 }  // namespace compression
-}  // namespace util
+}  // namespace google
 
 #endif  // UTIL_COMPRESSION_GIPFELI_INTERNAL_LZ77_H_
