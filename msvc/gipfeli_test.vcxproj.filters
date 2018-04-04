@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\gipfeli_test.cc">
+    <ClCompile Include="..\src\gipfeli_test.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

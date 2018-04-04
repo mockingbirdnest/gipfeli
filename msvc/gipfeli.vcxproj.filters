@@ -15,60 +15,60 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\compression.h">
+    <ClInclude Include="..\include\gipfeli\compression.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\config.h">
+    <ClInclude Include="..\include\gipfeli\gipfeli.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\entropy.h">
+    <ClInclude Include="..\include\gipfeli\sinksource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\entropy_code_builder.h">
+    <ClInclude Include="..\src\config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\enum.h">
+    <ClInclude Include="..\src\entropy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\find_match_length.h">
+    <ClInclude Include="..\src\entropy_code_builder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gipfeli.h">
+    <ClInclude Include="..\src\enum.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\gipfeli-internal.h">
+    <ClInclude Include="..\src\find_match_length.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\lz77.h">
+    <ClInclude Include="..\src\gipfeli-internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\read_bits.h">
+    <ClInclude Include="..\src\lz77.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\sinksource.h">
+    <ClInclude Include="..\src\read_bits.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\stream.h">
+    <ClInclude Include="..\src\stream.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\stubs-internal.h">
+    <ClInclude Include="..\src\stubs-internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\decompress.cc">
+    <ClCompile Include="..\src\decompress.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\entropy.cc">
+    <ClCompile Include="..\src\entropy.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\entropy_code_builder.cc">
+    <ClCompile Include="..\src\entropy_code_builder.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\gipfeli-internal.cc">
+    <ClCompile Include="..\src\gipfeli-internal.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\lz77.cc">
+    <ClCompile Include="..\src\lz77.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
