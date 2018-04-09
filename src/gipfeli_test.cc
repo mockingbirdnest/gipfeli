@@ -10,7 +10,7 @@
 #include <string>
 #include <vector>
 
-#include "gipfeli.h"
+#include "gipfeli/gipfeli.h"
 #include "stubs-internal.h"
 
 using std::cout;

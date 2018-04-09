@@ -14,7 +14,7 @@
 #include "gipfeli-internal.h"
 #include "lz77.h"
 #include "stubs-internal.h"
-#include "sinksource.h"
+#include "gipfeli/sinksource.h"
 
 namespace google {
 namespace compression {

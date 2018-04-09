@@ -33,8 +33,7 @@
 #ifndef UTIL_COMPRESSION_GIPFELI_PUBLIC_GIPFELI_H_
 #define UTIL_COMPRESSION_GIPFELI_PUBLIC_GIPFELI_H_
 
-#include "stubs-internal.h"
-#include "compression.h"
+#include "gipfeli/compression.h"
 
 namespace google {
 namespace compression {

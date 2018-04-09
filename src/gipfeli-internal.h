@@ -4,8 +4,8 @@
 #ifndef UTIL_COMPRESSION_GIPFELI_INTERNAL_GIPFELI_H_
 #define UTIL_COMPRESSION_GIPFELI_INTERNAL_GIPFELI_H_
 
-#include "gipfeli.h"
-#include "compression.h"
+#include "gipfeli/gipfeli.h"
+#include "gipfeli/compression.h"
 
 namespace google {
 namespace compression {
