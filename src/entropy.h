@@ -5,7 +5,7 @@
 
 #include <string>
 
-#include "stubs-internal.h"
+#include "gipfeli/stubs-internal.h"
 
 namespace google {
 namespace compression {

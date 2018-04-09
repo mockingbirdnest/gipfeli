@@ -3,7 +3,7 @@
 #ifndef UTIL_COMPRESSION_GIPFELI_INTERNAL_ENTROPY_CODE_BUILDER_H_
 #define UTIL_COMPRESSION_GIPFELI_INTERNAL_ENTROPY_CODE_BUILDER_H_
 
-#include "stubs-internal.h"
+#include "gipfeli/stubs-internal.h"
 
 namespace google {
 namespace compression {

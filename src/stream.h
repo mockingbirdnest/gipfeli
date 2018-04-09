@@ -13,7 +13,7 @@
 
 #include "gipfeli-internal.h"
 #include "lz77.h"
-#include "stubs-internal.h"
+#include "gipfeli/stubs-internal.h"
 #include "gipfeli/sinksource.h"
 
 namespace google {

@@ -8,7 +8,7 @@
 
 #include "entropy_code_builder.h"
 #include "enum.h"
-#include "stubs-internal.h"
+#include "gipfeli/stubs-internal.h"
 
 namespace google {
 namespace compression {

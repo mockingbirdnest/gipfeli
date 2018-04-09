@@ -5,7 +5,7 @@
 #ifndef UTIL_COMPRESSION_GIPFELI_INTERNAL_LZ77_H_
 #define UTIL_COMPRESSION_GIPFELI_INTERNAL_LZ77_H_
 
-#include "stubs-internal.h"
+#include "gipfeli/stubs-internal.h"
 
 namespace google {
 namespace compression {

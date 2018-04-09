@@ -7,7 +7,7 @@
 #ifndef UTIL_COMPRESSION_GIPFELI_INTERNAL_FIND_MATCH_LENGTH_H_
 #define UTIL_COMPRESSION_GIPFELI_INTERNAL_FIND_MATCH_LENGTH_H_
 
-#include "stubs-internal.h"
+#include "gipfeli/stubs-internal.h"
 
 namespace google {
 namespace compression {

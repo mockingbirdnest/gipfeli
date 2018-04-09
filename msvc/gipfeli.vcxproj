@@ -59,7 +59,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\src;$(SolutionDir)..\include\gipfeli;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\src;$(SolutionDir)..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)lib$(TargetName)$(TargetExt)</OutputFile>
@@ -86,9 +86,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\include\gipfeli\compression.h" />
+    <ClInclude Include="..\include\gipfeli\config.h" />
     <ClInclude Include="..\include\gipfeli\gipfeli.h" />
     <ClInclude Include="..\include\gipfeli\sinksource.h" />
-    <ClInclude Include="..\src\config.h" />
+    <ClInclude Include="..\include\gipfeli\stubs-internal.h" />
     <ClInclude Include="..\src\entropy.h" />
     <ClInclude Include="..\src\entropy_code_builder.h" />
     <ClInclude Include="..\src\enum.h" />
@@ -97,7 +98,6 @@
     <ClInclude Include="..\src\lz77.h" />
     <ClInclude Include="..\src\read_bits.h" />
     <ClInclude Include="..\src\stream.h" />
-    <ClInclude Include="..\src\stubs-internal.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\decompress.cc" />

@@ -10,7 +10,7 @@
 #include "read_bits.h"
 #include "stream.h"
 
-#include "stubs-internal.h"
+#include "gipfeli/stubs-internal.h"
 
 namespace google {
 namespace compression {

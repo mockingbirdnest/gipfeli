@@ -9,7 +9,7 @@
 #include "entropy.h"
 #include "lz77.h"
 #include "gipfeli/sinksource.h"
-#include "stubs-internal.h"
+#include "gipfeli/stubs-internal.h"
 
 namespace google {
 namespace compression {
