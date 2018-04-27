@@ -7,6 +7,7 @@
 #endif
 #include <fstream>
 #include <iostream>
+#include <memory>
 #include <string>
 #include <vector>
 
@@ -82,7 +83,7 @@ bool TestFile(const string& label, const string& filename,
 
   // Init compressor and compress
   string compressed;
-  google::compression::Compressor* compressor =
+  std::unique_ptr<google::compression::Compressor> compressor =
       google::compression::NewGipfeliCompressor();
   ResetTimer();
   *compressed_size = compressor->Compress(original, &compressed);
@@ -93,7 +94,6 @@ bool TestFile(const string& label, const string& filename,
   ResetTimer();
   bool success = compressor->Uncompress(compressed, &uncompressed);
   *uncompression_time = GetElapsedTime();
-  delete compressor;
 
   return success && (original == uncompressed);
 }

@@ -33,6 +33,8 @@
 #ifndef UTIL_COMPRESSION_GIPFELI_PUBLIC_GIPFELI_H_
 #define UTIL_COMPRESSION_GIPFELI_PUBLIC_GIPFELI_H_
 
+#include <memory>
+
 #include "gipfeli/compression.h"
 
 namespace google {
@@ -41,7 +43,7 @@ namespace compression {
 // Return a new compressor object that implements gipfeli compression.
 // The returned object must be deleted after use. It is not safe for
 // use from multiple threads.
-Compressor* NewGipfeliCompressor();
+std::unique_ptr<Compressor> NewGipfeliCompressor();
 
 }  // namespace compression
 }  // namespace google

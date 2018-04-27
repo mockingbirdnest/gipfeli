@@ -3,6 +3,7 @@
 #include "gipfeli-internal.h"
 
 #include <algorithm>
+#include <memory>
 #include <stdlib.h>
 #include <string>
 
@@ -14,8 +15,8 @@
 namespace google {
 namespace compression {
 
-Compressor* NewGipfeliCompressor() {
-  return new gipfeli::Gipfeli();
+std::unique_ptr<Compressor> NewGipfeliCompressor() {
+  return std::make_unique<gipfeli::Gipfeli>();
 }
 
 namespace gipfeli {
