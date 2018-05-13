@@ -11,7 +11,7 @@ TEST_OBJECTS              := $(TEST_TRANSLATION_UNITS:.cc=.o)
 LIBRARY_OBJECTS           := $(LIBRARY_TRANSLATION_UNITS:.cc=.o)
 
 all:
-	libtool -static $(LIBRARY_OBJECTS) -o libgipfeli.a
+	ar -rcs libgipfeli.a $(LIBRARY_OBJECTS)
 
 clean:
 	rm -f src/*.o
