@@ -1,9 +1,9 @@
-CXX           := clang++
-SHARED_ARGS   := \
+CXX              := clang++
+COMPILER_OPTIONS := \
 	-std=c++1z -stdlib=libc++ -O3 -g                           \
 	-fPIC -fexceptions -ferror-limit=1 -fno-omit-frame-pointer \
 	-Wall -Wpedantic                                           \
-	-DNDEBUG
+	-DNDEBUG -Iinclude
 	
 TEST_TRANSLATION_UNITS    := $(wildcard */*_test.cc)
 LIBRARY_TRANSLATION_UNITS := $(filter-out $(TEST_TRANSLATION_UNITS), $(wildcard src/*.cc))
@@ -17,4 +17,4 @@ clean:
 	rm -f src/*.o
 
 %.o: %.cc
-	$(CXX) -c -o $@ $< $(SHARED_ARGS)
+	$(CXX) -c -o $@ $< $(COMPILER_OPTIONS)
