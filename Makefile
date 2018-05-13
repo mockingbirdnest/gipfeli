@@ -10,8 +10,8 @@ LIBRARY_TRANSLATION_UNITS := $(filter-out $(TEST_TRANSLATION_UNITS), $(wildcard 
 TEST_OBJECTS              := $(TEST_TRANSLATION_UNITS:.cc=.o)
 LIBRARY_OBJECTS           := $(LIBRARY_TRANSLATION_UNITS:.cc=.o)
 
-all:
-	ar -rcs libgipfeli.a $(LIBRARY_OBJECTS)
+all: $(LIBRARY_OBJECTS)
+	ar -rcs libgipfeli.a $^
 
 clean:
 	rm -f src/*.o
