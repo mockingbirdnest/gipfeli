@@ -62,6 +62,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)..\src;$(SolutionDir)..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <CallingConvention>VectorCall</CallingConvention>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)lib$(TargetName)$(TargetExt)</OutputFile>
@@ -80,6 +81,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)..\src;$(SolutionDir)..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <CallingConvention>VectorCall</CallingConvention>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

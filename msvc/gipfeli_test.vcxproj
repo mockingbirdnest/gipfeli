@@ -75,6 +75,7 @@
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <CallingConvention>VectorCall</CallingConvention>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)$(Configuration)\$(Platform)\libgipfeli.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -93,6 +94,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <CallingConvention>VectorCall</CallingConvention>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
