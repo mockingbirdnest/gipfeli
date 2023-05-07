@@ -52,5 +52,6 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: gipfeli
-        path: ${{ env.PRINCIPIA_HEADERS_GIPFELI }}
-        path: ${{ env.PRINCIPIA_MSVC_GIPFELI }}/**/${{ env.PRINCIPIA_MSVC_EXTENSIONS }}
+        path: |
+          ${{ env.PRINCIPIA_HEADERS_GIPFELI }}
+          ${{ env.PRINCIPIA_MSVC_GIPFELI }}/**/${{ env.PRINCIPIA_MSVC_EXTENSIONS }}
