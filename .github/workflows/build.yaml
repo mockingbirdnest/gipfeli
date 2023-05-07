@@ -60,4 +60,8 @@ jobs:
         name: gipfeli
         path: |
           ${{ env.PRINCIPIA_HEADERS_GIPFELI }}
-          ${{ env.PRINCIPIA_MSVC_GIPFELI }}\**\${{ env.PRINCIPIA_MSVC_EXTENSIONS }}
+          ${{ env.PRINCIPIA_MSVC_GIPFELI }}\**\*.dll
+          ${{ env.PRINCIPIA_MSVC_GIPFELI }}\**\*.exe
+          ${{ env.PRINCIPIA_MSVC_GIPFELI }}\**\*.lib
+          ${{ env.PRINCIPIA_MSVC_GIPFELI }}\**\*.pdb
+          ${{ env.PRINCIPIA_MSVC_GIPFELI }}\**\*.props
