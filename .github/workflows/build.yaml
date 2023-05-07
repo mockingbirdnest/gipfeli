@@ -15,10 +15,15 @@ jobs:
     steps:
     - name: Checkout source files
       uses: actions/checkout@v3
-    - name: Find MSBuild version
+    - name: Find MSBuild
       shell: pwsh
       run: |
-        $msbuild=&.\find_msbuild.ps1
+        $vswhere = "${Env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+        $msbuild = &$vswhere                    `
+          -prerelease                           `
+          -all                                  `
+          -requires Microsoft.Component.MSBuild `
+          -find MSBuild\**\Bin\MSBuild.exe
         echo "msbuild=$msbuild" >> $env:GITHUB_ENV
     - name: Restore ${{ matrix.configuration }}
       run: >
