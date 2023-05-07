@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ '*' ]
 
+env:
+  PRINCIPIA_HEADERS_GIPFELI: include/**/*.h
+  PRINCIPIA_MSVC_GIPFELI: msvc
+  PRINCIPIA_MSVC_EXTENSIONS: +(*.dll|*.exe|*.lib|*.pdb|*.props)
+
 jobs:
   build:
     runs-on: windows-latest
@@ -15,6 +20,7 @@ jobs:
     steps:
     - name: Checkout source files
       uses: actions/checkout@v3
+
     - name: Find MSBuild
       shell: pwsh
       run: |
@@ -25,12 +31,14 @@ jobs:
           -requires Microsoft.Component.MSBuild `
           -find MSBuild\**\Bin\MSBuild.exe
         echo "msbuild=$msbuild" >> $env:GITHUB_ENV
+
     - name: Restore ${{ matrix.configuration }}
       run: >
         &"${{ env.msbuild }}"
         /target:Restore
         /property:Configuration=${{ matrix.configuration }}
-        msvc/gipfeli.sln
+        ${{ env:PRINCIPIA_MSVC_GIPFELI }}/*.sln
+
     - name: Rebuild ${{ matrix.configuration }}
       run: >
         &"${{ env.msbuild }}"
@@ -38,4 +46,11 @@ jobs:
         /maxCpuCount
         /property:Configuration=${{ matrix.configuration }}
         /property:Platform=x64
-        msvc/gipfeli.sln
+        ${{ env:PRINCIPIA_MSVC_GIPFELI }}/*.sln
+
+    - name: 'Upload artifacts'
+      uses: actions/upload-artifact@v3
+      with:
+        name: gipfeli
+        path: ${{ env:PRINCIPIA_HEADERS_GIPFELI }}
+        path: ${{ env:PRINCIPIA_MSVC_GIPFELI }}/**/${{ env:PRINCIPIA_MSVC_EXTENSIONS }}
