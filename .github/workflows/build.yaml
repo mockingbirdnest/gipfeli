@@ -37,7 +37,7 @@ jobs:
         &"${{ env.msbuild }}"
         /target:Restore
         /property:Configuration=${{ matrix.configuration }}
-        ${{ env:PRINCIPIA_MSVC_GIPFELI }}/*.sln
+        ${{ env.PRINCIPIA_MSVC_GIPFELI }}/*.sln
 
     - name: Rebuild ${{ matrix.configuration }}
       run: >
@@ -46,11 +46,11 @@ jobs:
         /maxCpuCount
         /property:Configuration=${{ matrix.configuration }}
         /property:Platform=x64
-        ${{ env:PRINCIPIA_MSVC_GIPFELI }}/*.sln
+        ${{ env.PRINCIPIA_MSVC_GIPFELI }}/*.sln
 
     - name: 'Upload artifacts'
       uses: actions/upload-artifact@v3
       with:
         name: gipfeli
-        path: ${{ env:PRINCIPIA_HEADERS_GIPFELI }}
-        path: ${{ env:PRINCIPIA_MSVC_GIPFELI }}/**/${{ env:PRINCIPIA_MSVC_EXTENSIONS }}
+        path: ${{ env.PRINCIPIA_HEADERS_GIPFELI }}
+        path: ${{ env.PRINCIPIA_MSVC_GIPFELI }}/**/${{ env.PRINCIPIA_MSVC_EXTENSIONS }}
