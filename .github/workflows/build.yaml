@@ -55,13 +55,8 @@ jobs:
         }
 
     - name: 'Upload artifacts'
-      uses: actions/upload-artifact@v3
+      uses: mockingbirdnest/actions/upload_windows_artifact@WF1
       with:
         name: gipfeli
-        path: |
-          ${{ env.PRINCIPIA_HEADERS_GIPFELI }}
-          ${{ env.PRINCIPIA_MSVC_GIPFELI }}\**\*.dll
-          ${{ env.PRINCIPIA_MSVC_GIPFELI }}\**\*.exe
-          ${{ env.PRINCIPIA_MSVC_GIPFELI }}\**\*.lib
-          ${{ env.PRINCIPIA_MSVC_GIPFELI }}\**\*.pdb
-          ${{ env.PRINCIPIA_MSVC_GIPFELI }}\**\*.props
+        headers_glob: ${{ env.PRINCIPIA_HEADERS_GIPFELI }}
+        solution_directory: ${{ env.PRINCIPIA_MSVC_GIPFELI }}
