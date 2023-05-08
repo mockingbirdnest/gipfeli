@@ -43,19 +43,13 @@ jobs:
         }
 
     - name: Rebuild ${{ matrix.configuration }}
-      run: >
-        ls ${{ env.PRINCIPIA_MSVC_GIPFELI }}\*.sln | %
-        {
-        &"${{ env.msbuild }}"
-        /target:"Clean;Build"
-        /maxCpuCount
-        /property:Configuration=${{ matrix.configuration }}
-        /property:Platform=x64
-        $_
-        }
+      uses: mockingbirdnest/actions/windows/rebuild@WF1
+      with:
+        configuration: ${{ matrix.configuration }}
+        solution_directory: ${{ env.PRINCIPIA_MSVC_GIPFELI }}
 
     - name: 'Upload artifacts'
-      uses: mockingbirdnest/actions/upload_windows_artifact@WF1
+      uses: mockingbirdnest/actions/windows/upload_artifact@WF1
       with:
         name: gipfeli
         headers_glob: ${{ env.PRINCIPIA_HEADERS_GIPFELI }}
