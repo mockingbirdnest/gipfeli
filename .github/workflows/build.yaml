@@ -24,12 +24,6 @@ jobs:
     - name: Find MSBuild
       uses: mockingbirdnest/actions/windows/find_msbuild@main
 
-    - name: Restore ${{ matrix.configuration }}
-      uses: mockingbirdnest/actions/windows/restore@main
-      with:
-        configuration: ${{ matrix.configuration }}
-        solution_directory: ${{ env.PRINCIPIA_MSVC_GIPFELI }}
-
     - name: Rebuild ${{ matrix.configuration }}
       uses: mockingbirdnest/actions/windows/rebuild@main
       with:
