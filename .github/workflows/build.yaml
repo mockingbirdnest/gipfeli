@@ -9,7 +9,6 @@ on:
 env:
   PRINCIPIA_HEADERS_GIPFELI: include\**\*.h
   PRINCIPIA_MSVC_GIPFELI: msvc
-  PRINCIPIA_MSVC_EXTENSIONS: +(*.dll|*.exe|*.lib|*.pdb|*.props)
 
 jobs:
   build:
@@ -30,7 +29,7 @@ jobs:
         configuration: ${{ matrix.configuration }}
         solution_directory: ${{ env.PRINCIPIA_MSVC_GIPFELI }}
 
-    - name: 'Upload artifacts'
+    - name: Upload artifact
       uses: mockingbirdnest/actions/windows/upload_artifact@main
       with:
         name: gipfeli
