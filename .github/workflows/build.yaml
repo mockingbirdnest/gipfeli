@@ -1,0 +1,44 @@
+name: Build
+
+on:
+  push:
+    branches: [ '*' ]
+  pull_request:
+    branches: [ '*' ]
+
+env:
+  PRINCIPIA_HEADERS_GIPFELI: include\**\*.h
+  PRINCIPIA_MSVC_GIPFELI: msvc
+  PRINCIPIA_MSVC_EXTENSIONS: +(*.dll|*.exe|*.lib|*.pdb|*.props)
+
+jobs:
+  build:
+    runs-on: windows-latest
+    strategy:
+        matrix:
+          configuration: [Debug, Release]
+    steps:
+    - name: Checkout source files
+      uses: actions/checkout@v3
+
+    - name: Find MSBuild
+      uses: mockingbirdnest/actions/windows/find_msbuild@WF1
+
+    - name: Restore ${{ matrix.configuration }}
+      uses: mockingbirdnest/actions/windows/restore@WF1
+      with:
+        configuration: ${{ matrix.configuration }}
+        solution_directory: ${{ env.PRINCIPIA_MSVC_GIPFELI }}
+
+    - name: Rebuild ${{ matrix.configuration }}
+      uses: mockingbirdnest/actions/windows/rebuild@WF1
+      with:
+        configuration: ${{ matrix.configuration }}
+        solution_directory: ${{ env.PRINCIPIA_MSVC_GIPFELI }}
+
+    - name: 'Upload artifacts'
+      uses: mockingbirdnest/actions/windows/upload_artifact@WF1
+      with:
+        name: gipfeli
+        headers_glob: ${{ env.PRINCIPIA_HEADERS_GIPFELI }}
+        solution_directory: ${{ env.PRINCIPIA_MSVC_GIPFELI }}
