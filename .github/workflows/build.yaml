@@ -7,7 +7,7 @@ on:
     branches: [ '*' ]
 
 env:
-  PRINCIPIA_HEADERS_GIPFELI: include\**\*.h
+  PRINCIPIA_HEADERS_GIPFELI: include
   PRINCIPIA_MSVC_GIPFELI: msvc
 
 jobs:
@@ -33,5 +33,5 @@ jobs:
       uses: mockingbirdnest/actions/windows/upload_artifact@main
       with:
         name: gipfeli
-        headers_glob: ${{ env.PRINCIPIA_HEADERS_GIPFELI }}
+        headers_directory: ${{ env.PRINCIPIA_HEADERS_GIPFELI }}
         solution_directory: ${{ env.PRINCIPIA_MSVC_GIPFELI }}
