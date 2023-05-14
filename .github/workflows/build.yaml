@@ -21,13 +21,13 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Rebuild ${{ matrix.configuration }}
-      uses: mockingbirdnest/actions/windows/rebuild@WF
+      uses: mockingbirdnest/actions/windows/rebuild@main
       with:
         configuration: ${{ matrix.configuration }}
         solution_directory: ${{ env.PRINCIPIA_MSVC_GIPFELI }}
 
     - name: Upload artifact
-      uses: mockingbirdnest/actions/windows/upload_artifact@WF
+      uses: mockingbirdnest/actions/windows/upload_artifact@main
       with:
         name: gipfeli
         headers_directory: ${{ env.PRINCIPIA_HEADERS_GIPFELI }}
