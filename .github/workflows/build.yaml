@@ -22,6 +22,8 @@ jobs:
 
     - name: Initialize build environment
       uses: mockingbirdnest/actions/windows/initialize_build@WF
+      with:
+        configuration: ${{ matrix.configuration }}
 
     - name: Rebuild ${{ matrix.configuration }}
       uses: mockingbirdnest/actions/windows/rebuild@main
