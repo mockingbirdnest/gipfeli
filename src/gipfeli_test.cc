@@ -93,7 +93,23 @@ bool TestFile(const string& label, const string& filename,
   string uncompressed;
   ResetTimer();
   bool success = compressor->Uncompress(compressed, &uncompressed);
+  if (!success) {
+    cout << "Uncompress failed\n";
+  }
   *uncompression_time = GetElapsedTime();
+
+  if (original.size() == uncompressed.size()) {
+    for (size_t i = 0; i < original.size(); ++i) {
+      if (original[i] != uncompressed[i]) {
+        cout << "Difference at position " << i << " of " << original.size()
+             << ", " << original[i] << " vs " << uncompressed[i] << "\n";
+        break;
+      }
+    }
+  } else {
+    cout << "Size mismatch: " << original.size() << " vs. "
+         << uncompressed.size() << "\n";
+  }
 
   return success && (original == uncompressed);
 }
