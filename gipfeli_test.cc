@@ -1,4 +1,10 @@
+
+#if _MSC_VER
+#include <filesystem>
+#include <time.h>
+#else
 #include <sys/time.h>
+#endif
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -11,7 +17,11 @@ using std::cout;
 using std::endl;
 using std::vector;
 
+#if _MSC_VER
+const std::filesystem::path testdata_prefix("..\\testdata");
+#else
 const char testdata_prefix[] = "testdata/";
+#endif
 
 const int kRepetitions = 101;
 const int kFiles = 9;
@@ -40,9 +50,15 @@ void ReadTestDataFile(const string& filename, string* content) {
 double start;
 double stop;
 double Timestamp() {
+#if _MSC_VER
+  struct _timespec64 t;
+  _timespec64_get(&t, TIME_UTC);
+  return t.tv_nsec / 1000 + t.tv_sec * 1000000LL;
+#else
   struct timeval t;
   gettimeofday(&t, NULL);
   return t.tv_usec + t.tv_sec * 1000000LL;
+#endif
 }
 void ResetTimer() { start = Timestamp(); }
 double GetElapsedTime() {
@@ -56,7 +72,12 @@ bool TestFile(const string& label, const string& filename,
               double* compression_time, double* uncompression_time) {
   // Read the input
   string original;
+#if _MSC_VER
+  ReadTestDataFile((SOLUTION_DIR / testdata_prefix / filename).string(),
+                   &original);
+#else
   ReadTestDataFile(testdata_prefix + filename, &original);
+#endif
   *original_size = original.size();
 
   // Init compressor and compress
