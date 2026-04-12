@@ -10,6 +10,7 @@ on:
 env:
   PRINCIPIA_HEADERS_GIPFELI: include
   PRINCIPIA_MSVC_GIPFELI: msvc
+  PRINCIPIA_SOLUTION_GIPFELI: msvc/gipfeli.slnf
 
 jobs:
   build:
@@ -30,7 +31,7 @@ jobs:
       uses: mockingbirdnest/actions/windows/rebuild@main
       with:
         configuration: ${{ matrix.configuration }}
-        solution_directory: ${{ env.PRINCIPIA_MSVC_GIPFELI }}
+        solution_glob: ${{ env.PRINCIPIA_SOLUTION_GIPFELI }}
 
     - name: Upload artifact
       uses: mockingbirdnest/actions/windows/upload_artifact@main
