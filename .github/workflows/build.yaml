@@ -20,7 +20,7 @@ jobs:
           configuration: [Debug, Release]
     steps:
     - name: Checkout source files
-      uses: actions/checkout@v3
+      uses: actions/checkout@v6
 
     - name: Initialize build environment
       uses: mockingbirdnest/actions/windows/initialize_build@main
